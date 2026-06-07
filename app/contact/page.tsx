@@ -131,7 +131,7 @@
                     </div>
                     <h3 className="font-serif text-xl font-semibold mb-2">Opening Hours</h3>
                     <p className="text-foreground">Mon - Sun</p>
-                    <p className="text-muted-foreground text-sm mt-2">11:00 AM - 9:00 PM</p>
+                    <p className="text-muted-foreground text-sm mt-2">11:00 AM - 10:00 PM</p>
                   </motion.div>
                 </StaggerItem>
               </StaggerContainer>

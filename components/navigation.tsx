@@ -104,7 +104,10 @@ export function Navigation() {
               >
                 <Phone className="w-4 h-4" />
                 <span>Reserve Now</span>
+                
               </a>
+                              <img src="/images/halal.png" alt="Halal Certified" className="w-10 h-10" />
+
             </div>
 
             {/* Mobile Menu Button */}

@@ -400,7 +400,7 @@ export default function TestimonialsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24">
+        {/* <section className="py-24">
           <div className="container mx-auto px-6">
             <FadeIn className="text-center max-w-2xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
@@ -420,7 +420,7 @@ export default function TestimonialsPage() {
               </a>
             </FadeIn>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
       <WhatsAppButton />

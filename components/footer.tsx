@@ -39,14 +39,16 @@ export function Footer() {
             </p>
             <div className="flex gap-4 mt-6">
               <a
-                href="#"
+                href="https://www.instagram.com/madra_s88?utm_source=qr&igsh=M3dzZGg5YWQ2cnBv"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/1B7bZ5ZcDU/"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 aria-label="Facebook"
               >
@@ -103,12 +105,12 @@ export function Footer() {
                   +64 09 650 1744
                 </a>
               </div>
-              {/* <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-muted-foreground">
-                  Mon - Sun: 11am - 9pm
+                  Mon - Sun: 11am - 10pm
                 </p>
-              </div> */}
+              </div>
             </div>
           </motion.div>
 
