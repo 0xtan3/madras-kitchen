@@ -10,7 +10,7 @@ import { FadeIn, StaggerContainer, StaggerItem, FloatingElement, TextReveal } fr
 export function HeroSection() {
   const heroSlides = [
     {
-      image: "/images/cheesy-dosa.jpeg",
+      image: "/images/hero-dosa.png",
       title1: "Authentic",
       title2: "South Indian",
       title3: "Flavours",
@@ -446,8 +446,8 @@ export function LocationsSection() {
               <div className="space-y-3 sm:space-y-4 text-muted-foreground text-sm sm:text-base">
                 <p>5/190 Stoddard Road<br />Mount Roskill, Auckland 1041</p>
                 <div className="flex items-center gap-2">
-                  {/* <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-                  <span>Mon - Sun: 11am - 9pm</span> */}
+                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                  <span>Mon - Sun: 11am - 10pm</span>
                 </div>
                 <a href="tel:096501744" className="inline-flex items-center gap-2 text-primary font-medium">
                  +64 09 650 1744

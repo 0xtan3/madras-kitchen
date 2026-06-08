@@ -58,7 +58,7 @@ export function Navigation() {
                   <span className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-primary tracking-wide">
                     MADRAS
                   </span>
-                  <span className="font-serif text-xs sm:text-sm md:text-base text-foreground/80 tracking-[0.3em] -mt-1">
+                  <span className="font-serif text-s sm:text-sm md:text-base font-bold text-foreground/80 tracking-[0.3em] -mt-1">
                     KITCHEN
                   </span>
                 </div>
@@ -106,7 +106,7 @@ export function Navigation() {
                 <span>Reserve Now</span>
                 
               </a>
-                              <img src="/images/halal.png" alt="Halal Certified" className="w-10 h-10" />
+              <img src="/images/halal.png" alt="Halal Certified" className="w-14 h-14" />
 
             </div>
 

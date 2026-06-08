@@ -29,7 +29,7 @@ export function Footer() {
                 <span className="font-serif text-3xl font-bold text-primary tracking-wide">
                   MADRAS
                 </span>
-                <span className="font-serif text-sm text-foreground/80 tracking-[0.3em] -mt-1">
+                <span className="font-serif font-bold text-sm text-foreground/80 tracking-[0.3em] -mt-1">
                   KITCHEN
                 </span>
               </div>

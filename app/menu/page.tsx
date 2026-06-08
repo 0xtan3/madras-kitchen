@@ -165,8 +165,19 @@ export default function MenuPage() {
 
                     {/* Soup Section */}
                     <StaggerItem>
+                      <div className="relative h-32 sm:h-40 rounded-lg overflow-hidden mb-6">
+                        <Image
+                          src="/images/drumstick.jpeg"
+                          alt="South Indian Idly"
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+                        <div className="absolute inset-0 flex items-center px-4 sm:px-6">
+                          <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Soup</h3>
+                        </div>
+                      </div>
                       <div className="mb-8">
-                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-primary mb-6 pb-2 border-b border-primary/20">Soup</h3>
                         <div className="space-y-4">
                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
@@ -879,8 +890,19 @@ export default function MenuPage() {
 
                     {/* Soup */}
                     <StaggerItem>
+                      <div className="relative h-32 sm:h-40 rounded-lg overflow-hidden mb-6">
+                        <Image
+                          src="/images/Chicken-Soup.jpeg"
+                          alt="South Indian Idly"
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+                        <div className="absolute inset-0 flex items-center px-4 sm:px-6">
+                          <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Soup</h3>
+                        </div>
+                      </div>
                       <div className="mb-8">
-                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-primary mb-6 pb-2 border-b border-primary/20">Soup</h3>
                         <div className="space-y-4">
                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
@@ -1287,7 +1309,6 @@ export default function MenuPage() {
                         </div>
                       </div>
                       <div className="mb-8">
-                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-primary mb-6 pb-2 border-b border-primary/20">Mains</h3>
                         <div className="space-y-4">
                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
