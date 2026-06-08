@@ -233,7 +233,7 @@
                   className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium text-lg hover:bg-primary/90 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call Now: +64 273498859</span>
+                  <span>Call Now: +64 096501744</span>
                 </a>
               </FadeIn>
             </div>
