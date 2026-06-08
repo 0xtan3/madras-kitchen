@@ -102,7 +102,7 @@
                       <Phone className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="font-serif text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-primary font-medium">09 650 1744</p>
+                    <p className="text-primary font-medium">+64 09 650 1744</p>
                     <p className="text-muted-foreground text-sm mt-2">For reservations & enquiries</p>
                   </motion.a>
                 </StaggerItem>
