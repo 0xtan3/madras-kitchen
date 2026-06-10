@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react"
+import { PiTiktokLogo } from "react-icons/pi"
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -53,6 +54,14 @@ export function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@madras.kitchen8?_r=1&_t=ZS-9724eqgApYy"
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                aria-label="Tiktok"
+              >
+                <PiTiktokLogo className="w-5 h-5" />
               </a>
             </div>
           </motion.div>
