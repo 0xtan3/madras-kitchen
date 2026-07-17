@@ -143,7 +143,7 @@ export default function MenuPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
                   <div className="absolute inset-0 flex items-center">
                     <div className="px-6 sm:px-8">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/30 mb-3">
@@ -212,12 +212,15 @@ export default function MenuPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
                         <div className="absolute inset-0 flex items-center px-4 sm:px-6">
-                          <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
-                            South Indian Snacks
-                            <span className="block text-sm sm:text-base font-normal text-red-500">
+                          <div className="flex flex-col items-start">
+                            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                              South Indian Snacks
+                            </h3>
+                            <span className="inline-flex items-center mt-2 px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-red-600 text-xs sm:text-sm font-bold tracking-wide">
                               Coming soon !!!
                             </span>
-                          </h3>                        </div>
+                          </div>
+                        </div>
                       </div>
                       <div className="space-y-4">
                         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
@@ -839,7 +842,7 @@ export default function MenuPage() {
                               <span className="text-primary font-semibold whitespace-nowrap text-sm sm:text-base">$16.99</span>
                             </div>
                           </motion.div>
-                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
+                          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base">Family Pack Briyani</h4>
@@ -868,7 +871,7 @@ export default function MenuPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
                   <div className="absolute inset-0 flex items-center">
                     <div className="px-6 sm:px-8">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 border border-secondary/40 mb-3">
@@ -1512,7 +1515,7 @@ export default function MenuPage() {
                       </div>
                     </StaggerItem>
 
-                    
+
                     {/* Briyani */}
                     <StaggerItem>
                       <div className="relative h-32 sm:h-40 rounded-lg overflow-hidden mb-6">
@@ -1538,7 +1541,7 @@ export default function MenuPage() {
                               <span className="text-primary font-semibold whitespace-nowrap text-sm sm:text-base">$17.99</span>
                             </div>
                           </motion.div>
-                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
+                          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base">Goat Briyani</h4>
@@ -1547,7 +1550,7 @@ export default function MenuPage() {
                               <span className="text-primary font-semibold whitespace-nowrap text-sm sm:text-base">$19.99</span>
                             </div>
                           </motion.div>
-                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
+                          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base">Prawn Briyani</h4>
@@ -1565,7 +1568,7 @@ export default function MenuPage() {
                               <span className="text-primary font-semibold whitespace-nowrap text-sm sm:text-base">$55.99</span>
                             </div>
                           </motion.div>
-                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
+                          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base">Family pack Goat Briyani</h4>
@@ -1574,7 +1577,7 @@ export default function MenuPage() {
                               <span className="text-primary font-semibold whitespace-nowrap text-sm sm:text-base">$65.99</span>
                             </div>
                           </motion.div>
-                           <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
+                          <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group">
                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4">
                               <div className="flex-1 min-w-0">
                                 <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base">Family pack Prawn Briyani</h4>
@@ -1603,7 +1606,7 @@ export default function MenuPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
                   <div className="absolute inset-0 flex items-center">
                     <div className="px-6 sm:px-8">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 mb-3">
@@ -1774,7 +1777,7 @@ export default function MenuPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
                   <div className="absolute inset-0 flex items-center">
                     <div className="px-6 sm:px-8">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 mb-3">
