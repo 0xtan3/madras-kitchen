@@ -61,7 +61,7 @@ export function Footer() {
               </motion.a>
               {/* TikTok */}
               <motion.a
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@madras.kitchen8?_r=1&_t=ZS-96yni6F9hbA"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
