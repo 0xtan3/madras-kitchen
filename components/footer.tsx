@@ -2,7 +2,8 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react"
+import { MapPin, Phone, Clock } from "lucide-react"
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6"
 
 
 
@@ -31,23 +32,46 @@ export function Footer() {
             <p className="text-muted-foreground leading-relaxed">
               Authentic South Indian flavours crafted with passion. From our family to yours.
             </p>
-            <div className="flex gap-4 mt-6">
-              <a
+            <div className="flex gap-3 mt-6">
+              {/* Instagram */}
+              <motion.a
                 href="https://www.instagram.com/madra_s88?utm_source=qr&igsh=M3dzZGg5YWQ2cnBv"
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300"
+                style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
+                <FaInstagram className="w-5 h-5" />
+              </motion.a>
+              {/* Facebook */}
+              <motion.a
                 href="https://www.facebook.com/share/1B7bZ5ZcDU/"
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300"
+                style={{ backgroundColor: '#1877F2' }}
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
-              </a>
+                <FaFacebookF className="w-5 h-5" />
+              </motion.a>
+              {/* TikTok */}
+              <motion.a
+                href="https://www.tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md transition-all duration-300"
+                style={{ backgroundColor: '#010101' }}
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-5 h-5" style={{ color: '#ff0050' }} />
+              </motion.a>
             </div>
           </motion.div>
 
