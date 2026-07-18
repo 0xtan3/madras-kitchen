@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { HalalBadge } from '@/components/halal-badge'
 import './globals.css'
 
 const inter = Inter({ 
@@ -44,7 +43,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
-        <HalalBadge />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

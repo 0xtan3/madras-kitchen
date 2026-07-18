@@ -92,6 +92,21 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>
 
+      {/* Halal Sticker */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+        animate={{ opacity: 1, scale: 1, rotate: -5 }}
+        transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 200 }}
+        whileHover={{ scale: 1.08, rotate: 0 }}
+        className="absolute top-28 left-4 sm:left-8 z-30 select-none cursor-pointer"
+      >
+        <img
+          src="/images/halal.png"
+          alt="100% Halal Certified"
+          className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
+        />
+      </motion.div>
+
 
 
       {/* Content */}
