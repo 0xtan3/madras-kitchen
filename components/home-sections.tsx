@@ -92,18 +92,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/40 z-10" />
       </div>
 
-      {/* Halal Sticker */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="absolute top-28 right-4 sm:right-8 z-30"
-      >
-        <div className="flex items-center gap-2 bg-black/45 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full shadow-lg">
-          <img src="/images/halal.png" alt="Halal Certified Logo" className="w-5 h-5 object-contain" />
-          <span className="text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-white">100% Halal Certified</span>
-        </div>
-      </motion.div>
+
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20 min-h-screen flex items-center justify-center pt-24 sm:pt-24">

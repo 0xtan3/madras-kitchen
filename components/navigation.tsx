@@ -178,14 +178,6 @@ export function Navigation() {
                     <span>Reserve Now</span>
                   </a>
                 </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="mt-4 flex justify-center"
-                >
-                  <img src="/images/halal.png" alt="Halal Certified" className="w-14 h-14" />
-                </motion.div>
               </div>
             </motion.nav>
           </motion.div>
