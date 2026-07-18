@@ -14,35 +14,35 @@ const roadmap = [
     description: "Started as a humble food truck, serving authentic South Indian cuisine to the streets of Auckland.",
     color: "#e63946",
     icon: Target,
-    position: { left: "12%", top: "65%" },
+    position: { left: "10%", top: "70%" },
   },
   {
     title: "Growing Community",
     description: "Built a loyal following through quality food and genuine hospitality during challenging times.",
     color: "#f77f00",
     icon: UsersRound,
-    position: { left: "30%", top: "45%" },
+    position: { left: "30%", top: "66%" },
   },
   {
     title: "Expanding Horizons",
     description: "Introduced new dishes and expanded our menu based on customer feedback and family recipes.",
     color: "#2a9d8f",
     icon: Sprout,
-    position: { left: "50%", top: "55%" },
+    position: { left: "50%", top: "48%" },
   },
   {
     title: "Restaurant Opens",
     description: "Opened our doors at Mount Roskill, bringing the food truck experience to a comfortable dining space.",
     color: "#1d4ed8",
     icon: Presentation,
-    position: { left: "70%", top: "30%" },
+    position: { left: "70%", top: "40%" },
   },
   {
     title: "Continuing the Legacy",
     description: "Serving the Auckland community with the same passion and authenticity that started our journey.",
     color: "#7b2cbf",
     icon: Rocket,
-    position: { left: "88%", top: "15%" },
+    position: { left: "90%", top: "20%" },
   },
 ]
 
@@ -174,166 +174,87 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Roadmap Journey Section - COMPACT */}
-        <section className="py-12 bg-gradient-to-b from-slate-100 to-slate-200 overflow-hidden">
+        {/* Roadmap Journey Section - VERTICAL TIMELINE */}
+        <section className="py-20 bg-gradient-to-b from-slate-100 to-slate-200 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6">
-            <FadeIn className="text-center mb-6">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2">
+            <FadeIn className="text-center mb-16">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">
                 Our <span className="text-primary">Journey</span>
               </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto text-sm">
+              <p className="text-muted-foreground max-w-xl mx-auto text-sm sm:text-base">
                 From a food truck dream to a thriving restaurant, every step has been a labour of love.
               </p>
             </FadeIn>
 
-            {/* Roadmap Visual */}
-            <div ref={roadmapRef} className="relative w-full max-w-3xl mx-auto h-48 sm:h-56 md:h-64">
-              {/* Road Background */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl bg-white"
-              >
-                {/* Dotted Road Path SVG */}
-                <svg
-                  className="absolute inset-0 w-full h-full"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                >
-                  {/* Road path connecting all phases - winding with loop */}
-                  <motion.path
-                    d="M 10 70 C 25 50, 35 80, 45 60 S 60 20, 70 40 C 75 50, 80 30, 90 20"
-                    fill="none"
-                    stroke="#000000"
-                    strokeWidth="0.6"
-                    strokeDasharray="1.5, 1.5"
-                    strokeLinecap="round"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    whileInView={{ pathLength: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                  />
-                  {/* Animated car icon on the path */}
-                  {isRoadmapInView && (
-                    <motion.g
-                      initial={{ offsetDistance: "0%" }}
-                      animate={{ offsetDistance: "100%" }}
-                      transition={{ duration: 5, ease: "easeInOut" }}
-                      style={{
-                        offsetPath: "path('M 10 70 C 25 50, 35 80, 45 60 S 60 20, 70 40 C 75 50, 80 30, 90 20')",
-                      }}
-                    >
-                      {/* Car icon */}
-                      <g transform="translate(-1.5, -1)">
-                        <rect x="0" y="0.5" width="3" height="1.5" rx="0.3" fill="#D4AF37" />
-                        <rect x="0.5" y="-0.3" width="2" height="0.8" rx="0.2" fill="#D4AF37" />
-                        <circle cx="0.6" cy="2" r="0.3" fill="#D4AF37" />
-                        <circle cx="2.4" cy="2" r="0.3" fill="#D4AF37" />
-                      </g>
-                    </motion.g>
-                  )}
-                </svg>
-              </motion.div>
+            {/* Timeline wrapper */}
+            <div className="relative max-w-4xl mx-auto px-2 sm:px-4">
+              {/* Vertical line connecting nodes */}
+              <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-[2px] bg-slate-300 -translate-x-1/2" />
 
-              {/* Animated Pins along the road */}
-              {roadmap.map((step, index) => {
-                return (
-                  <motion.div
-                    key={step.title}
-                    initial={{ opacity: 0, scale: 0, y: 20 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.2,
-                      type: "spring",
-                      stiffness: 200,
-                    }}
-                    whileHover={{ scale: 1.15, y: -8 }}
-                    className="absolute z-20 cursor-pointer"
-                    style={{
-                      left: step.position.left,
-                      top: step.position.top,
-                      transform: "translate(-50%, -100%)",
-                    }}
-                  >
-                    <div
-                      className="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center
-                       text-white font-bold text-xs sm:text-sm md:text-base shadow-xl
-                       transition-all duration-300 hover:scale-110"
-                      style={{
-                        background: `linear-gradient(135deg, #D4AF37, #B8960C)`,
-                        border: "2px solid white",
-                      }}
-                    >
-                      {index + 1}
-                    </div>
-                  </motion.div>
-                )
-              })}
-
-              {/* Animated road progress line */}
-              <motion.div
-                className="absolute top-0 left-0 right-0 bottom-0 z-10 pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
-                  opacity: roadProgress,
-                }}
-              />
-            </div>
-
-            {/* Numbered Cards Below Road */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mt-8 max-w-5xl mx-auto">
+              {/* Steps */}
               {roadmap.map((step, index) => {
                 const Icon = step.icon
                 return (
-                  <motion.div
+                  <div
                     key={step.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="relative bg-white rounded-xl p-4 sm:p-5 shadow-lg border border-slate-200 hover:shadow-xl transition-shadow"
+                    className={`relative flex flex-col md:flex-row items-start justify-between w-full mb-12 last:mb-0 ${
+                      index % 2 === 0 ? '' : 'md:flex-row-reverse'
+                    }`}
                   >
-                    {/* Number badge */}
+                    {/* Circle badge */}
                     <div
-                      className="absolute -top-4 left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg"
+                      className="absolute left-6 md:left-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-md z-10 -translate-x-1/2 -translate-y-1/2 top-8 md:top-1/2"
                       style={{
                         background: `linear-gradient(135deg, #D4AF37 0%, #B8960C 100%)`,
-                        border: "2px solid white",
+                        border: "3px solid white",
                       }}
                     >
                       {index + 1}
                     </div>
 
-                    {/* Icon */}
-                    <div
-                      className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg flex items-center justify-center mx-auto mb-3 mt-2"
-                      style={{
-                        background: `#D4AF3715`,
-                      }}
-                    >
-                      <Icon className="w-5 h-5" style={{ color: "#D4AF37" }} strokeWidth={2} />
+                    {/* Timeline card */}
+                    <div className="w-full md:w-[calc(50%-2.5rem)] pl-12 md:pl-0">
+                      <motion.div
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30, y: 15 }}
+                        whileInView={{ opacity: 1, x: 0, y: 0 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        whileHover={{ y: -4 }}
+                        className="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-slate-200/60 relative hover:shadow-xl transition-all duration-300"
+                      >
+                        {/* Accent border stripe */}
+                        <div
+                          className={`absolute top-0 bottom-0 w-1 bg-primary rounded-full ${
+                            index % 2 === 0 ? 'left-0 md:left-auto md:right-0' : 'left-0'
+                          }`}
+                        />
+
+                        {/* Icon */}
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+                          style={{
+                            background: `#D4AF3715`,
+                          }}
+                        >
+                          <Icon className="w-5 h-5" style={{ color: "#D4AF37" }} strokeWidth={2} />
+                        </div>
+
+                        {/* Text Content */}
+                        <span className="text-[10px] font-bold text-primary tracking-wider uppercase">
+                          Phase {index + 1}
+                        </span>
+                        <h3 className="font-serif text-lg md:text-xl font-bold text-slate-900 mt-1 mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                          {step.description}
+                        </p>
+                      </motion.div>
                     </div>
 
-                    {/* Content */}
-                    <h3 className="font-serif text-xs sm:text-sm md:text-base font-bold text-slate-900 text-center mb-1.5 leading-tight">
-                      {step.title}
-                    </h3>
-                    <p className="text-slate-600 text-[10px] sm:text-xs text-center leading-relaxed line-clamp-2">
-                      {step.description}
-                    </p>
-
-                    {/* Bottom accent line */}
-                    <div
-                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 rounded-full"
-                      style={{ backgroundColor: "#D4AF37" }}
-                    />
-                  </motion.div>
+                    {/* Spacer for desktop layout */}
+                    <div className="hidden md:block w-[calc(50%-2.5rem)]" />
+                  </div>
                 )
               })}
             </div>
@@ -420,6 +341,73 @@ export default function AboutPage() {
                   />
                 </div>
               </FadeIn>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Our Gallery Section */}
+        <section className="py-24 bg-background border-t border-border">
+          <div className="container mx-auto px-6">
+            <FadeIn className="text-center mb-16">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+                Our <span className="text-primary">Space</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
+                Take a look inside Madras Kitchen. A warm, inviting atmosphere designed to complement our authentic flavours.
+              </p>
+            </FadeIn>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {/* Image 1 - Large Feature */}
+              <div className="relative aspect-square md:aspect-auto md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden shadow-md group border border-border/80">
+                <Image
+                  src="/restaurant_images/rest_imgs (1).jpeg"
+                  alt="Madras Kitchen counter and front service area"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Image 3 */}
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md group border border-border/80">
+                <Image
+                  src="/restaurant_images/rest_imgs (3).jpeg"
+                  alt="Madras Kitchen dining setup and table settings"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Image 4 */}
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md group border border-border/80">
+                <Image
+                  src="/restaurant_images/rest_imgs (4).jpeg"
+                  alt="Madras Kitchen interior dining room seating"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Image 5 */}
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md group border border-border/80">
+                <Image
+                  src="/restaurant_images/rest_imgs (5).jpeg"
+                  alt="Madras Kitchen storefront glass doors and seating"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Image 6 */}
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md group border border-border/80">
+                <Image
+                  src="/restaurant_images/rest_imgs (6).jpeg"
+                  alt="Madras Kitchen restaurant lighting and environment"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </section>
