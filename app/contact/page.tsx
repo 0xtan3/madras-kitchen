@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations"
-import { MapPin, Phone, Clock, Mail, Send, CheckCircle } from "lucide-react"
+import { MapPin, Phone, Clock, Mail, Send, CheckCircle, Sparkles, Utensils } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -171,6 +171,15 @@ export default function ContactPage() {
                           +64 09 650 1744
                         </a>
                       </p>
+
+                      {/* Dedicated Car Parking Info */}
+                      <div className="mt-4 pt-4 border-t border-border flex items-center gap-3 bg-primary/5 p-3 rounded-lg border border-primary/10">
+                        <img src="/images/parking.jpg" alt="Dedicated Car Parking" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                        <div>
+                          <h4 className="text-foreground font-semibold text-sm">Dedicated Car Parking</h4>
+                          <p className="text-muted-foreground text-xs">Ample customer parking available at the rear</p>
+                        </div>
+                      </div>
                     </div>
                     <a
                       href="https://maps.google.com/?q=5/190+Stoddard+Road+Mount+Roskill+Auckland+1041"
@@ -212,6 +221,98 @@ export default function ContactPage() {
                   </div>
                 </div>
               </FadeIn>
+            </div>
+          </div>
+        </section>
+
+        {/* Events & Catering Section */}
+        <section className="py-20 bg-card border-t border-b border-border">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto">
+              <FadeIn className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-sm text-primary font-medium uppercase tracking-wider">Our Services</span>
+                </div>
+                <h2 className="font-serif text-3xl md:text-5xl font-bold">
+                  Events &amp; <span className="text-primary">Food Catering</span>
+                </h2>
+                <p className="text-muted-foreground text-base mt-3 max-w-xl mx-auto">
+                  Let us host your next celebration or bring the authentic flavors of South Indian cuisine to your venue.
+                </p>
+              </FadeIn>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Private Events Card */}
+                <FadeIn direction="left" delay={0.2}>
+                  <div className="group relative bg-background p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full shadow-md hover:shadow-lg">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors duration-300" />
+                    
+                    <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                      <Sparkles className="w-6 h-6" />
+                    </div>
+                    
+                    <h3 className="font-serif text-2xl font-bold mb-3 text-foreground">Private Events &amp; Parties</h3>
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 flex-grow">
+                      Celebrate birthday parties, family get-togethers, or corporate gatherings in our warm, inviting dining space. We custom-configure the seating and offer set menu packages to make your event stress-free and memorable.
+                    </p>
+                    
+                    <div className="mt-auto space-y-3">
+                      <div className="flex items-center gap-2.5 text-foreground/90 font-medium text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span>Dining capacity for up to 50 guests</span>
+                      </div>
+                      <div className="flex items-center gap-2.5 text-foreground/90 font-medium text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span>Custom table layouts &amp; menu packaging</span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href="tel:096501744"
+                      className="mt-8 flex items-center justify-center gap-2 w-full px-5 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full text-sm font-semibold transition-all duration-300"
+                    >
+                      <Phone className="w-4 h-4" />
+                      <span>Inquire About Event Hosting</span>
+                    </a>
+                  </div>
+                </FadeIn>
+
+                {/* Catering Services Card */}
+                <FadeIn direction="right" delay={0.3}>
+                  <div className="group relative bg-background p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full shadow-md hover:shadow-lg">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 group-hover:bg-primary/10 transition-colors duration-300" />
+                    
+                    <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                      <Utensils className="w-6 h-6" />
+                    </div>
+                    
+                    <h3 className="font-serif text-2xl font-bold mb-3 text-foreground">Premium Food Catering</h3>
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 flex-grow">
+                      Bring the true flavor of South India to your venue! We provide professional catering services across Auckland for weddings, housewarmings, corporate galas, and outdoor festivals. 
+                    </p>
+                    
+                    <div className="mt-auto space-y-3">
+                      <div className="flex items-center gap-2.5 text-foreground/90 font-medium text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span>Live Dosa Station &amp; Tandoor Counters</span>
+                      </div>
+                      <div className="flex items-center gap-2.5 text-foreground/90 font-medium text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span>Tailored menu plans for veg &amp; non-veg</span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href="tel:+64273498859"
+                      className="mt-8 flex items-center justify-center gap-2 w-full px-5 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-sm font-semibold transition-all duration-300"
+                    >
+                      <Phone className="w-4 h-4" />
+                      <span>Inquire About Food Catering</span>
+                    </a>
+                  </div>
+                </FadeIn>
+              </div>
             </div>
           </div>
         </section>

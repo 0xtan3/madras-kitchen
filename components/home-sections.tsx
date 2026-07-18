@@ -98,7 +98,7 @@ export function HeroSection() {
         animate={{ opacity: 1, scale: 1, rotate: -5 }}
         transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 200 }}
         whileHover={{ scale: 1.08, rotate: 0 }}
-        className="absolute top-28 left-4 sm:left-8 z-30 select-none cursor-pointer hidden lg:block"
+        className="absolute top-28 left-4 sm:left-8 z-30 select-none cursor-pointer"
       >
         <img
           src="/images/halal.png"
@@ -106,6 +106,7 @@ export function HeroSection() {
           className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]"
         />
       </motion.div>
+
 
 
       {/* Content */}
@@ -137,20 +138,6 @@ export function HeroSection() {
           >
             {heroSlides[currentSlide].description}
           </motion.p>
-
-          {/* Mobile Halal Sticker (centered inline, no overlap) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex lg:hidden justify-center mb-8"
-          >
-            <img
-              src="/images/halal.png"
-              alt="100% Halal Certified"
-              className="w-16 h-16 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
-            />
-          </motion.div>
 
           <motion.div
             key={`buttons-${currentSlide}`}
@@ -469,6 +456,15 @@ export function LocationsSection() {
                 <a href="tel:096501744" className="inline-flex items-center gap-2 text-primary font-medium">
                  +64 09 650 1744
                 </a>
+
+                {/* Dedicated Car Parking Info */}
+                <div className="mt-4 pt-4 border-t border-border flex items-center gap-3 bg-primary/5 p-3 rounded-lg border border-primary/10">
+                  <img src="/images/parking.jpg" alt="Dedicated Car Parking" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                  <div>
+                    <h4 className="text-foreground font-semibold text-sm">Dedicated Car Parking</h4>
+                    <p className="text-muted-foreground text-xs">Ample customer parking available at the rear</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </FadeIn>
