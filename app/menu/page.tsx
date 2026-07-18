@@ -66,10 +66,10 @@ export default function MenuPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-[64px] sm:pt-[72px]">
+      <main className="pt-[96px] sm:pt-[100px]">
 
         {/* Category Toggle */}
-        <section className="py-6 sm:py-8 sticky top-[64px] sm:top-[72px] bg-background/95 backdrop-blur-md z-30 border-b border-border">
+        <section className="py-6 sm:py-8 sticky top-[96px] sm:top-[100px] bg-background/95 backdrop-blur-md z-30 border-b border-border">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               <motion.button
