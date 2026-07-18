@@ -19,7 +19,13 @@ export const metadata: Metadata = {
   keywords: ['South Indian food', 'Auckland restaurant', 'Indian cuisine', 'Madras Kitchen', 'Mount Roskill', 'authentic Indian food'],
   authors: [{ name: 'Madras Kitchen' }],
   icons: {
-    icon: '/MK.png',
+    icon: [
+      { url: '/MK.png', sizes: 'any' },
+      { url: '/MK.png', type: 'image/png', sizes: '192x192' },
+      { url: '/MK.png', type: 'image/png', sizes: '512x512' }
+    ],
+    shortcut: '/MK.png',
+    apple: '/MK.png',
   },
   openGraph: {
     title: 'Madras Kitchen | Authentic South Indian Cuisine',
