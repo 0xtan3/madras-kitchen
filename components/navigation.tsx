@@ -106,8 +106,6 @@ export function Navigation() {
                 <span>Reserve Now</span>
                 
               </a>
-              <img src="/images/halal.png" alt="Halal Certified" className="w-14 h-14" />
-
             </div>
 
             {/* Mobile Menu Button */}
